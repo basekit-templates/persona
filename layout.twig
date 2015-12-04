@@ -1,0 +1,27 @@
+<!doctype html>
+
+<html class="no-js" lang="{{ page.seoLang }}">
+<!--<![endif]-->
+
+{% include "includes/head.twig" %}
+
+<body class="{{ page.backgroundClass }} {% block class %}{% endblock %}">
+
+  {% include "includes/header.twig" %}
+
+        <div class="template-content">
+
+            <div class="container">
+                {% block content %}
+                {% endblock %}
+            </div>
+
+        </div>
+    {% include "includes/footer.twig" %}
+
+    {% include basekit.bodyScript %}
+
+    <script src="{{ asset('js/theme.js')}}"></script>
+
+</body>
+</html>

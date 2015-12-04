@@ -1,0 +1,456 @@
+//
+// Copyright 2014 BaseKit Platform Ltd
+//
+// ---------------------
+// BasePlate main styles
+// ---------------------
+
+// Template Imports
+// ----------------
+@import "@{templateCommon}/bk-less-framework-v8.less"; // BaseKit LESS Framework
+
+@import "@{templateLocal}/less/variables-mixins.less";         // Variables & Mixins
+
+@import "@{templateLocal}/less/header.less";         // Header
+
+@import "@{templateLocal}/less/widget-gallery.less";    // Widgets
+@import "@{templateLocal}/less/widget-slideshow.less";
+@import "@{templateLocal}/less/widget-navigation.less";
+@import "@{templateLocal}/less/social-icons.less";
+
+@import "@{templateLocal}/less/plugin-blog.less";       // Plugins
+@import "@{templateLocal}/less/plugin-menu.less";
+@import "@{templateLocal}/less/plugin-ecommerce.less";
+
+@import "@{templateLocal}/less/forms-and-buttons.less";    // General Style for forms and Buttons
+
+@import "@{templateLocal}/variables.less";  // V8 Overrides
+
+
+// ------------------------------
+// Breakpoints
+// ------------------------------
+
+
+
+@bp-global-large:   ~"only screen and (min-width : 1200px)";
+@bp-global-medium:  ~"only screen and (min-width : 851px) and (max-width : 1200px)";
+@bp-global-small:   ~"only screen and (max-width : 850px)";
+
+
+
+// Template Styles
+// ---------------
+h1 {
+	padding:10px 0 20px 0;
+}
+
+a {
+    color: @color-swatch3;
+}
+
+// Wrapping container
+.container {
+    position: relative;
+    width: 90%;
+    margin: 0 5%;
+    @media only screen and (min-width: 1140px) {
+        width: 960px; // 1140px - 10% for margins
+        margin: 0 auto;
+    }
+}
+
+// ------------------------------------------
+// Body background
+// ------------------------------------------
+
+
+body {
+    height: 100%;
+    background: @color-swatch1;
+    background: -moz-linear-gradient(-45deg, @color-swatch1 0%, @color-swatch1 25%, @color-swatch2 25%, @color-swatch2 75%, @color-swatch2 75%, @color-swatch1 75%); 
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,@color-swatch1), color-stop(25%,@color-swatch1), color-stop(25%,@color-swatch2), color-stop(75%,@color-swatch2), color-stop(75%,@color-swatch2), color-stop(75%,@color-swatch1));
+    background: -webkit-linear-gradient(-45deg, @color-swatch1 0%,@color-swatch1 25%,@color-swatch2 25%,@color-swatch2 75%,@color-swatch2 75%,@color-swatch1 75%);
+    background: -o-linear-gradient(-45deg, @color-swatch1 0%,@color-swatch1 25%,@color-swatch2 25%,@color-swatch2 75%,@color-swatch2 75%,@color-swatch1 75%); 
+    background: -ms-linear-gradient(-45deg, @color-swatch1 0%,@color-swatch1 25%,@color-swatch2 25%,@color-swatch2 75%,@color-swatch2 75%,@color-swatch1 75%); 
+    background: linear-gradient(135deg, @color-swatch1 0%,@color-swatch1 25%,@color-swatch2 25%,@color-swatch2 75%,@color-swatch2 75%,@color-swatch1 75%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@color-swatch1', endColorstr='@color-swatch1',GradientType=1 ); 
+}
+
+
+
+
+// ------------------------------------------
+// Default Page
+// ------------------------------------------
+
+// Background
+
+.zone-content {
+    padding: 30px;
+    margin-bottom: 30px;
+    background-color: @color-swatch7;
+    -webkit-box-shadow: 6px 6px 6px -5px rgba(50, 50, 50, 0.15);
+    -moz-box-shadow: 6px 6px 6px -5px rgba(50, 50, 50, 0.15);
+    box-shadow: 6px 6px 6px -5px rgba(50, 50, 50, 0.15);
+    @media @mobile {
+        padding: 20px;
+    }
+}
+
+.bk-pt-blogpostlist {
+    .zone-content {
+        width: 100%;
+        padding: 0;
+        background-color:transparent;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+}
+
+.bk-pt-blogpost,
+.bk-pt-ecomproduct {
+    .page-title {
+        display: none;
+    }
+    .zone-content {
+        width: 100%;
+    }
+}
+
+
+// Page Title
+
+.bk-pt-defaultpage,
+.bk-pt-store {
+    .page-title {
+        text-align: center;
+        h1 {
+            padding-bottom: 10px;
+            font-size: bkscale(@font__h1--font-size,0.9);
+            line-height: bkscale(@font__h1--line-height,0.9);
+            color: @color-swatch5;
+        }
+    }
+    @media only screen and (min-width : 770px) {
+        position: relative;
+        width: 100%;
+        .page-title {
+            position: absolute;
+            top: 0;
+            left: 0;
+            -webkit-transform-origin: 0% 0%;
+            -moz-transform-origin: 0% 0%;
+            -o-transform-origin: 0% 0%;
+            -ms-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+            -webkit-transform: rotate(-90deg) translate(-100%, 0px);
+            -moz-transform: rotate(-90deg) translate(-100%, 0px);
+            -o-transform: rotate(-90deg) translate(-100%, 0px);
+            -ms-transform: rotate(-90deg) translate(-100%, 0px);
+            transform: rotate(-90deg) translate(-100%, 0px);
+            h1 {
+                padding: 0;
+                line-height: 1.2;
+                text-align: right;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                font-size: @font__h1--font-size;
+                max-width: 70vh;
+            }
+        }
+        .zone-content {
+            width: 90%;
+            float: right;
+            min-height: 437px;
+        }
+    }
+}
+
+
+
+// ------------------------------------------
+// Categories and Tags
+// ------------------------------------------
+
+.product-attribute-title,
+.category-title,
+.tags-title {
+    display: none;
+}
+.category-link,
+.tag-link {
+    margin-right: 5px;
+    font-family: @font-swatch7-font-family;
+    font-size: @font-swatch7-font-size;
+    line-height: @font-swatch7-line-height;
+    color: @color-swatch3;
+    font-weight: 400;
+    &:hover {
+        color: lighten(@color-swatch5, 25%);
+        text-decoration: none;
+    }
+}
+.tag-link {
+    &:before {
+        content: "#";
+    }
+}
+
+
+// ------------------------------------------
+// Sticky footer
+// ------------------------------------------
+
+body {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+     -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+}
+
+.template-content {
+    flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+// Columns in Footer
+
+.template-footer {
+    display: inline-block;
+    width: 100%;
+    padding: 50px 0;
+    background-color: lighten(@color-swatch1, 4%);
+    p,
+    a {
+        font-size: bkscale(@font__p--font-size,0.9);
+        line-height: bkscale(@font__p--line-height,0.9);
+        padding: 0;
+    }
+    .signupform .form-body {
+        width: 100%;
+    }
+    .account-link {
+        font-size: @font__h3--font-size;
+        line-height: @font__h3--line-height;
+    }
+}
+
+.template-footer__column2.col2 {
+    margin-top: 20px;
+}
+
+.template-footer__column1,
+.template-footer__column2 {
+    @media screen and (min-width: 700px) {
+        overflow: hidden;
+        display: inline-block;
+        width: 50%;
+        height: auto;
+        &.col1 {
+            float: left;
+            padding-right: 20px;
+        }
+        &.col2 {
+            float: right;
+            padding-left: 20px;
+            text-align: right;
+            margin-top: 0;
+        }
+    }
+}
+
+.template-footer__column2.col2 .tweet-item {
+    text-align: left;
+}
+
+
+// -----------------------------
+// Divider (Keyline)
+// -----------------------------
+
+hr.rule {
+    height: 1px;
+    background-color: darken(@color-swatch7, 10%);
+}
+
+
+// Horizontal rule in blog posts
+hr {
+    height: 1px;
+    border: 0;
+    margin-bottom: 18px;
+    background-color: darken(@color-swatch7, 10%);
+}
+
+
+
+
+// -----------------------------
+// Images Caption
+// -----------------------------
+
+.caption {
+    .image-title {
+        font-family: @font-swatch8-font-family;
+        font-size: @font-swatch8-font-size;
+        line-height: @font-swatch8-line-height;
+        font-weight: @font-swatch8-font-weight;
+        color: @font-swatch8-color;
+    }
+    .image-description {
+        font-family: @font-swatch9-font-family;
+        font-size: @font-swatch9-font-size;
+        line-height: @font-swatch9-line-height;
+        font-weight: @font-swatch9-font-weight;
+        color: @font-swatch9-color;
+    }
+}
+
+
+
+
+// -----------------------------
+// Twitter Widget
+// -----------------------------
+
+.twitter .tweet-item {
+    p {
+        padding-bottom: 0;
+    }
+    .tweet-wrap {
+        max-width: 80%;
+    }
+    .avatar {
+        max-width: 16%;
+        margin-right: 15px;
+        @media @mobile {
+            margin-bottom: 10px;
+            margin-right: 0;
+        }
+    }
+    .avatar-image {
+        @media @tablet {
+            max-width: 48px;
+        }
+    }
+    .tweet-wrap {
+        max-width: 77%;
+        @media @mobile {
+            margin: 0 auto;
+        }
+    }
+    .avatar,
+    .tweet-wrap {
+        display: inline-block;
+        vertical-align: top;
+        @media @mobile {
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+    .account-link {
+        &:hover {
+            color: @color-swatch3;
+            text-decoration: none;
+        }
+    }
+    .tweet-metadata {
+        font-size: 90%;
+        .timestamp, .via {
+            color: lighten(@color-swatch5, 15%)
+        }
+    }
+    .timestamp {
+        margin-right: 5px;
+    }
+}
+
+
+
+
+// -----------------------------
+// Yelp Widget
+// -----------------------------
+
+.yelpreview ul {
+    list-style: none;
+    margin-left: 0;
+}
+
+
+
+
+// -----------------------------
+// Click to Call Widget
+// -----------------------------
+
+.clicktocall {
+    a:hover {
+        text-decoration: none;
+        cursor: text;
+    }
+    @media screen and (max-width: 854px) {
+        .phone-number-link {
+            width: 100%;
+            padding: 8px 20px;
+            text-align: center;
+            background-color: @font-swatch7-background-color;
+            .label {
+                color: @font-swatch7-color;
+            }
+            &:before {
+                color: @font-swatch7-color;
+            }
+            &:hover {
+                background-color: @font-swatch7-background-color-hover;
+            }
+        }
+        a:hover {
+            cursor: pointer;
+        }
+        .label {
+            color: @font-swatch7-color;
+        }
+    }
+}
+
+
+
+
+// -----------------------------
+// Blockquote
+// -----------------------------
+
+blockquote {
+    position: relative;
+    background-color: transparent;
+    padding: 20px 35px;
+    &:before {
+        position: absolute;
+        left: 5px;
+        color: @color-swatch2;
+        font-size: 55px;
+    }
+}
+
+
+
+
+// -----------------------------
+// Content Widget
+// -----------------------------
+
+
+

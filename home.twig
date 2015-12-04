@@ -1,0 +1,19 @@
+{% extends "layout.twig" %}
+{% block class %}bk-pt-home{% endblock %}
+{% block content %}
+
+    <div class="home-bloglist">
+        <!-- Blog posts list Widget -->
+        {{widget('blogpostlist', 'allblogposts', {})|raw}}
+    </div>
+
+	<!-- Zone Content -->
+	<div class="zone-content">
+		<!-- Main Widet Zone -->
+   		{{zone('main')|raw}}
+	</div>
+	<!-- End Zone Content -->
+
+
+<!-- End Home Page Content -->
+{% endblock %}

@@ -1,0 +1,255 @@
+// --------
+// Header
+// --------
+
+
+// ---------------
+// Flexbox
+// ---------------
+
+.header-flex-container {
+    .flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: start;
+    -moz-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+// Global style for flex items
+.header-flex-item {
+        -webkit-flex: 1 1 50%;
+        -ms-flex: 1 1 50%;
+        flex: 1 1 50%;
+        -webkit-align-self: stretch;
+        -ms-flex-item-align: stretch;
+        align-self: stretch;
+        margin-bottom: 0;
+    @media @tablet {
+        -webkit-box-ordinal-group: 1;
+        -moz-box-ordinal-group: 1;
+        -webkit-order: 0;
+        -ms-flex-order: 0;
+        order: 0;
+        margin-bottom: 0;
+        -webkit-flex: 1 1 auto;
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+    }
+}
+
+
+
+
+// --------------------------------------
+// Margins
+// --------------------------------------
+
+@media only screen and (min-width: 770px) {
+    .template-header-rowtwo .form.form {
+        margin-top: 20px;
+    }
+    .logo {
+        margin-top: 10px;
+    }
+    .companyname {
+        margin-top: 17px;
+    }
+}
+
+.template-header-rowtwo {
+    @media @tablet {
+        margin-top: 40px;
+    }
+}
+
+.home-bloglist,
+.zone-content,
+.bk-pt-defaultpage .page-title,
+.bk-pt-store .page-title {
+    margin-top: 40px;
+    @media @tablet {
+        margin-top: 30px;
+    }
+}
+
+
+
+
+// ---------------------------------------------------------
+// Fix for nav and social icons overlay in tablet and mobile
+// ---------------------------------------------------------
+
+// Fix overlay in editor on tablet and mobile
+
+div#page-zones__template-widgets__extendednavigation-extendednavigation-bk-overlay {
+    @media @tablet {
+        width: 50%;
+        height: 44px;
+        top: -44px !important;
+    }
+    @media @mobile {
+        width: 20%;
+    }
+}
+
+div#page-zones__template-widgets__socialicons-socialnetworks-bk-overlay {
+    @media @tablet {
+        width: 50%;
+        left: inherit !important;
+    }
+    @media @mobile {
+        width: 80%;
+    }
+}
+
+
+
+
+// --------------------------------------
+// Header First Row: Nav and Social Icons
+// --------------------------------------
+
+.header-flex-container.template-header-rowone {
+    -webkit-flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    .header-flex-item {
+        -webkit-flex: 1 1 auto;
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+    }
+}
+
+// Navigation widget
+.template-navigation {
+    @media @tablet {
+        -webkit-box-flex: 1;
+        -moz-box-flex: 1;
+        -webkit-flex: 1 1 auto;
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+        width: 100%;
+        .navigation-toggle {
+            height: 44px;
+        }
+    }
+}
+
+.header-flex-item.header-social {
+    min-height: 44px;
+}
+
+// Margins
+
+@media only screen and (min-width: 770px) {
+    .extendednavigation,
+    .socialicons {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        .social-list {
+            margin-top: 23px;
+        }
+    }
+}
+
+
+
+
+
+// ------------------------------------------
+// Header Second Row: Company Name and Search
+// -------------------------------------------
+
+
+.template-header-rowtwo .header-flex-item {
+    @media only screen and (min-width: 770px) {
+        -webkit-align-self: auto;
+        -ms-flex-item-align: auto;
+        align-self: auto;
+    }
+    @media @tablet {
+        -webkit-flex: 1 1 100%;
+        -ms-flex: 1 1 100%;
+        flex: 1 1 100%;
+        text-align: center;
+    }
+}
+
+
+
+
+
+// Logo and Company Name
+
+.template-logo,
+.template-companyname {
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-align-self: stretch;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+    margin-bottom: 0;
+    line-height: 44px;
+}
+
+.logo-link,
+.logo-image {
+    vertical-align: middle;
+}
+
+.logo {
+    margin-right: 10px;
+    @media @tablet {
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+}
+
+.logo-image {
+    @media @mobile {
+        max-height: 150px;
+    }
+}
+
+.company-link:hover {
+    color: @color-swatch3;
+    text-decoration: none;
+    .transition( all, 0.5s, ease );
+}
+
+// Template Search
+
+.template-search {
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+
+
+
+// -------------------
+// Tablet top Bar
+// -------------------
+
+.tablet-top-bar {
+    @media @tablet {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 44px;
+        background-color: lighten(@color-swatch1, 4%);
+    }
+}
+
+
+

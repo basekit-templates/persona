@@ -1,0 +1,250 @@
+//
+// Copyright 2014 BaseKit Platform Ltd
+//
+// ----
+// menu
+// ----
+
+// Menu sections widget
+// --------------------
+
+.menusections-body {
+    @media only screen and (max-width: 550px) {
+        padding-top: 0;
+    }
+}
+
+.menusections-list {
+    display: table;
+    width: 100%;
+    margin: 0;
+    @media @tablet {
+        text-align: center;
+    }
+}
+
+.menusections-item {
+    display: inline-block;
+    padding-right: 0;
+    margin-right: 20px;
+    a {
+        font-family: @font__h3--font-family;
+        color: @color-swatch3;
+        font-size: @font__p--font-size;
+        font-weight: @font__p--font-weight;
+        line-height: @font__p--line-height;
+    }
+    @media only screen and (max-width: 550px) {
+        padding: 15px 0 10px 0;
+        width: 100%;
+        border-bottom: 1px solid darken(@color-swatch1,7%);
+    }
+    &:last-child {
+        margin-right: 0;
+        @media only screen and (max-width: 550px) {
+            border-bottom: 1px solid darken(@color-swatch1,7%);
+        }
+    }
+}
+
+
+
+
+// Menu
+// ------------------------
+
+
+.menu {
+    .clearfix;
+    .main {
+        width: 100%;
+        margin: 0 auto;
+        border: none;
+        display: none;
+        &.selected {
+            display: block;
+        }
+    }
+    .section-header {
+        border-bottom: 2px solid darken(@color-swatch7, 10%);
+        margin-bottom: 35px;
+        padding-bottom: 35px;
+        @media @mobile {
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+        }
+        @media @mobile {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+        }
+    }
+    .section-description,
+    .section-subtitle {
+        font-family:@font__p--font-family;
+        font-weight: @font__p--font-weight;
+        color: @font-swatch5-color;
+        font-size: bkscale(@font__p--font-size,0.9);
+        line-height: bkscale(@font__p--line-height,0.9);
+        letter-spacing: @font__p--letter-spacing;
+    }
+    .item-image .image {
+        padding: 10px;
+    }
+    .item-price {
+        font-family:@font__h3--font-family;
+        font-weight: @font__h3--font-weight;
+        color:@color-swatch5;
+        line-height:@font__h3--line-height;
+        letter-spacing: @font__h3--letter-spacing;
+        font-size: @font__h3--font-size;
+    }
+    .item-description {
+        margin-top: 10px;
+    }
+    // Dietary icons
+    .dietary-item.icon:not(.icon--not-spicy) {
+        &:before {
+            content: "\2713";
+            margin-right: 0;
+            color: @color-swatch4;
+        }
+    }
+    // Text size
+    .item-details,
+    .item-subtitle,
+    .item-description p,
+    .dietary-item,
+    .section-note {
+        font-size: bkscale(@font__p--font-size,0.9);
+        line-height: bkscale(@font__p--line-height,0.9);
+    }
+    // Note in the section footer
+    .section-note {
+        border-top: 2px solid @color-swatch7;
+        margin-top: 30px;
+        padding-top: 20px;
+    }
+    // backgrounds
+    .menu-item--featured {
+        background-color: darken(@color-swatch1, 8%);
+    }
+    .item-image .image-link {
+        background-color: @color-swatch1;
+    }
+    .menu-item--featured .item-image .image {
+        padding: 0;
+    }
+
+    // Featured item
+
+    .menu-item--featured {
+        background-color: @color-swatch2;
+        .item-image .image-link {
+            background-color: transparent;
+            padding-bottom: 20px;
+        }
+        .item-content {
+            margin-top: 0;
+        }
+    }
+
+    // Images
+    .menu-section--featured .menu-item--featured .item-image .image-link,
+    .item-image .image-link {
+        height: 240px;
+        line-height: 240px;
+        @media only screen and (max-width: 1140px) {
+            height: 175px;
+            line-height: 175px;
+        }
+        @media only screen and (max-width: 1024px) {
+            height: 171px;
+            line-height: 171px;
+        }
+        @media only screen and (max-width: 960px) {
+            height: 157px;
+            line-height: 157px;
+        }
+        @media only screen and (max-width: 900px) {
+            height: 200px;
+            line-height: 200px;
+        }
+    }
+    .menu-item--featured .item-image .image-link {
+        height: 213px;
+        line-height: 213px;
+        @media only screen and (max-width: 1140px) {
+            height: 170px;
+            line-height: 170px;
+        }
+        @media only screen and (max-width: 1024px) {
+            height: 144px;
+            line-height: 144px;
+        }
+        @media only screen and (max-width: 960px) {
+            height: 130px;
+            line-height: 130px;
+        }
+        @media only screen and (max-width: 900px) {
+            height: 200px;
+            line-height: 200px;
+        }
+    }
+    // Subsection
+    .menu-section--subsection {
+        padding: 0;
+        background-color: transparent;
+        border: none;
+        box-shadow: none;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        @media @tablet {
+            padding: 0;
+        }
+        @media @mobile {
+            padding: 0;
+        }
+    }
+    .menu-section--subsection .section-header {
+        border-bottom: 2px solid darken(@color-swatch1, 15%);
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+        padding-top: 20px;
+    }
+    // Featured Subsection
+    .menu-section--featured {
+        padding: 30px;
+        margin-bottom: 20px;
+        background-color: darken(@color-swatch1, 8%);
+        border: none;
+        box-shadow: none;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        @media @mobile {
+            padding: 20px;
+        }
+        .section-header {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            padding-top: 0;
+        }
+        .section-title {
+            color: @color-swatch4;
+        }
+        .menu-item--featured,
+        .image-link {
+            background-color: transparent;
+        }
+        .menu-item--featured,
+        .item-image .image {
+            padding: 0;
+        }
+        .section-note {
+            border-top: 2px solid darken(@color-swatch1, 15%);
+        }
+    }
+}
+
+.menu > .menu-section {
+    margin-bottom: 20px;
+}

@@ -1,0 +1,170 @@
+//
+// Copyright 2014 BaseKit Platform Ltd
+//
+// -------
+// gallery
+// -------
+
+// Gallery 3 column layout
+// -----------------------
+
+// Title and description colour
+.image-title,
+.image-description {
+    color: @color-swatch1;
+}
+
+// Gallery list container
+.gallery-list {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+// Gallery items
+.gallery .gallery-item {
+    position: relative;
+    width: 32%;
+    margin-bottom: 20px;
+    // Display 50% at tablet
+    @media @tablet {
+        width: 48%;
+    }
+    // Display 100% at mobile
+    @media @mobile {
+        width: 100%;
+    }
+}
+
+// Gallery item links
+.gallery .image-link {
+    display: block;
+    height: 257px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    @media @tablet {
+        height: 303px;
+    }
+    @media only screen and (max-width: 650px) {
+        height: 252px;
+    }
+    @media only screen and (max-width: 550px) {
+        height: 208px;
+    }
+}
+
+// Gallery hide img element (uses background cover technique)
+.gallery .image {
+    display: none;
+}
+
+// Gallery caption
+.gallery .caption {
+    display: none;
+    margin: 0;
+    padding: 20px;
+    background-color: @color__gallery-caption--background;
+}
+
+// Gallery show caption on hover
+.gallery .figure:hover .caption {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+}
+
+.gallery .figure .caption-link:hover {
+    text-decoration: none;
+    .image-title,
+    .image-description {
+        color: @color-swatch3;
+    }
+}
+
+// Gallery Images in Responsive Columns
+
+// Two Columns
+.columns-two-left,
+.columns-two-right {
+    .gallery__image-link {
+        height: 150px;
+        @media @tablet {
+            height: 107px;
+        }
+        @media @mobile {
+            height: 200px;
+        }
+    }
+    .gallery__caption {
+        padding: 10px;
+        // hide description on desktop
+        @media only screen and (min-width: 768px) {
+            .image-title {
+                font-size: bkscale(@font__p--font-size,0.8);
+                line-height: bkscale(@font__p--line-height,0.8);
+            }
+            .image-description {
+                display: none;
+            }
+        }
+    }
+    // hide caption on tablet only
+    @media only screen and (max-width : 768px) and (min-width : 480px) {
+        .gallery__figure:hover .gallery__caption {
+            display: none;
+        }
+    }
+}
+// Three Columns
+.columns-three-left,
+.columns-three-middle,
+.columns-three-right {
+    .gallery__image-link {
+        height: 95px;
+        @media @tablet {
+            height: 69px;
+        }
+        @media @mobile {
+            height: 200px;
+        }
+    }
+    // hide caption on desktop and tablet
+    @media only screen and (min-width: 480px) {
+        .gallery__figure:hover .gallery__caption {
+            display: none;
+        }
+    }
+}
+// Four Columns
+.columns-four-first,
+.columns-four-second,
+.columns-four-third,
+.columns-four-fourth {
+    .gallery__image-link {
+        height: 69px;
+        @media @tablet {
+            height: 107px;
+        }
+        @media @mobile {
+            height: 200px;
+        }
+    }
+    // hide caption on desktop and tablet
+    @media only screen and (min-width: 480px) {
+        .gallery__figure:hover .gallery__caption {
+            display: none;
+        }
+    }
+}

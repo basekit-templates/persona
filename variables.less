@@ -1,0 +1,220 @@
+// Template colour overrides
+html body {
+	background: @color__body--background; 
+    background: -moz-linear-gradient(-45deg, @color__body--background 0%, @color__body--background 25%, @color__secondary 25%, @color__secondary 75%, @color__secondary 75%, @color__body--background 75%); 
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,@color__body--background), color-stop(25%,@color__body--background), color-stop(25%,@color__secondary), color-stop(75%,@color__secondary), color-stop(75%,@color__secondary), color-stop(75%,@color__body--background)); 
+    background: -webkit-linear-gradient(-45deg, @color__body--background 0%,@color__body--background 25%,@color__secondary 25%,@color__secondary 75%,@color__secondary 75%,@color__body--background 75%); 
+    background: -o-linear-gradient(-45deg, @color__body--background 0%,@color__body--background 25%,@color__secondary 25%,@color__secondary 75%,@color__secondary 75%,@color__body--background 75%); 
+    background: -ms-linear-gradient(-45deg, @color__body--background 0%,@color__body--background 25%,@color__secondary 25%,@color__secondary 75%,@color__secondary 75%,@color__body--background 75%); 
+    background: linear-gradient(135deg, @color__body--background 0%,@color__body--background 25%,@color__secondary 25%,@color__secondary 75%,@color__secondary 75%,@color__body--background 75%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@color__body--background', endColorstr='@color__body--background',GradientType=1 );
+}
+
+.company-link {
+	color: @color__companyname--text;
+}
+
+a {
+	color: @color__link--text;
+}
+
+h1 {
+	color: @color__h1--text;
+}
+
+h2 {
+	color: @color__h2--text;
+}
+
+h3 {
+	color: @color__h3--text;
+}
+
+h4 {
+	color: @color__h4--text;
+}
+
+p {
+	color: @color__p--text;
+}
+
+div.content a {
+	color: @color__link--text;
+}
+
+button,
+a.button,
+button.button,
+.read-more {
+	background-color: @color__button--background;
+	color: @color__button--text;
+	&:hover {
+		background-color: @color__button--background--hover;
+	}
+}
+
+footer.template-footer {
+	background-color: @color__footer--background;
+}
+
+.extendednavigation {
+	&__item-name.item-name {
+		color: @color__navigation--text;
+		&:hover {
+			color: @color__navigation--text--hover;
+		}
+	}
+	.navigation-item.selected > .item-name {
+		color: @color__navigation--text--selected;
+	}
+}
+
+.feature {
+	background-color: @color__feature--background;
+	&__content-wrap {
+		background-color: @color__feature-content--background;
+	}
+	&__headline {
+		background-color: @color__feature-headline--background;
+		color: @color__feature-headline--text;
+	}
+	&__strapline {
+		background-color: @color__feature-strapline--background;
+		color: @color__feature-strapline--text;
+	}
+	&__button {
+		background-color: @color__feature-button--background;
+		color: @color__feature-button--text;
+		&:hover {
+			background-color: @color__feature-button--background--hover;
+		}
+	}
+}
+
+form,
+.form {
+	legend,
+	.legend {
+		color: @color__form-legend--text;
+	}
+	label,
+	.label {
+		color: @color__form-label--text;
+	}
+	.signupform__label {
+		color: @color__form-legend--text;
+	}
+}
+
+.imagewidget {
+	.caption .image-title {
+		color: @color__image-title--text;
+	}
+	.caption .image-description {
+		color: @color__image-description--text;
+	}
+}
+
+.gallery {
+	.caption {
+		background-color: @color__gallery-caption--background;
+	}
+	.caption .image-title {
+		color: @color__gallery-title--text;
+	}
+	.caption .image-description {
+		color: @color__gallery-description--text;
+	}
+}
+
+.responsiveslideshow {
+	.caption .image-title {
+		color: @color__slideshow-title--text;
+	}
+	.caption .image-description {
+		color: @color__slideshow-description--text;
+	}
+	.button--pagination {
+		background-color: @color__slideshow-pagination-item--background;
+		color: @color__slideshow-pagination-item--background--selected;
+	}
+}
+
+.twitter {
+	&__tweet-item {
+		background-color: @color__twitter-item--background;
+	}
+	&__account-link {
+		color: @color__twitter-account-name--text;
+	}
+}
+
+.socialicons {
+	&__social-link,
+	.social-link {
+		&:hover {
+			text-decoration: none;
+		}
+		&:before {
+			color: @color__socialicons--icon;
+		}
+		&:hover:before {
+			color: @color__socialicons--icon--hover;
+		}
+	}
+}
+
+.blogsearch {
+	&__legend.legend {
+		color: @color__blogsearch-legend--text;
+	}
+}
+
+.blogpostlist {
+	.post-article {
+		background-color: @color__blogpostlist-article--background;
+	}
+	.post-title .title-link {
+		color: @color__blogpostlist-title--text;
+	}
+	.post-title .title-link:hover {
+		color: @color__primary;
+	}
+}
+
+.blogpost {
+	&__post-title {
+		color: @color__blogpost-title--text;
+	}
+}
+
+.ecomproductslist {
+	&__label.label {
+		color: @color__ecomproductslist-label--text;
+	}
+	&__product-item-title a {
+		color: @color__ecomproductslist-product-title--text;
+	}
+}
+
+.ecomproduct {
+	&__image-link.image-link,
+	&__gallery-item.gallery-item {
+		background-color: @color__ecomproduct-images--background;
+	}
+	&__product-title {
+		color: @color__ecomproduct-title--text;
+	}
+	.product-price {
+		color: @color__ecomproduct-price--text;
+	}
+}
+.ecombasket {
+	button.button {
+		background-color: @color__ecombasket-button--background;
+		color: @color__ecombasket-button--text;
+		&:hover {
+			background-color: @color__ecombasket-button--background--hover;
+		}
+	}
+}

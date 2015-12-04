@@ -1,0 +1,98 @@
+//
+// Copyright 2014 BaseKit Platform Ltd
+//
+// ---------
+// variables
+// ---------
+
+// Colour swatches
+// -------------------
+@bg-color:        @color-swatch1; // Background
+@contrast-color:  @color-swatch2; // Background Second Color
+@button-color:    @color-swatch3; // Button BG Color and Contrast Colour
+@heading-color:   @color-swatch4; // Heading Text Color (H1 - H4)
+@paragraph-color: @color-swatch5; // Paragraph Text Color
+@nav-color:       @color-swatch6; // Nav Link Color
+@spare-color:     @color-swatch7; // Spare Color Background
+
+
+// -----------------------------
+// Mixins
+// -----------------------------
+
+.transition (@prop: all, @time: 0.5s, @ease: ease) {
+    -webkit-transition: @prop @time @ease;
+    -moz-transition:    @prop @time @ease;
+    -ms-transition:     @prop @time @ease;
+    -o-transition:      @prop @time @ease;
+    transition:         @prop @time @ease;
+}
+
+
+.box-shadow (@string:3px 3px 0px 0px rgba(0,0,0,0.07)) {
+    -webkit-box-shadow: @string;
+    -moz-box-shadow:    @string;
+    box-shadow:         @string;
+}
+
+.transform ( @transform: scale(1) ) {
+    -webkit-transform: @transform;
+    -ms-transform: @transform;
+    transform: @transform;
+
+}
+
+.flex (@display: flex, @direction: row, @wrap: nowrap, @justify: space-between, @align: stretch, @align-items: flex-end) {
+    display: ~"-webkit-@{display}";
+    display: ~"-moz-@{display}";
+    display: ~"-ms-@{display}box"; // IE10 uses -ms-flexbox
+    display: ~"-ms-@{display}"; // IE11
+    display: @display;
+
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+
+    -webkit-flex-direction: @direction;
+    -moz-flex-direction: @direction;
+    -ms-flex-direction: @direction;
+    flex-direction: @direction;
+
+
+    -webkit-flex-wrap: @wrap;
+    -moz-flex-wrap: @wrap;
+    -ms-flex-wrap: @wrap;
+    flex-wrap: @wrap;
+
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
+
+    -webkit-justify-content: @justify;
+    -moz-justify-content: @justify;
+    -ms-justify-content: @justify;
+    justify-content: @justify;
+
+    -webkit-align-content: @align;
+    -moz-align-content: @align;
+    -ms-align-content: @align;
+    align-content: @align;
+
+    -webkit-align-items: @align-items;
+    -moz-align-items: @align-items;
+    -ms-align-items: @align-items;
+    align-items: @align-items;
+}
+
+
+
+// Enabling HW acceleration in WebKit
+// ----------------------------------
+
+
+.animation {
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+}

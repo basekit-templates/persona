@@ -1,0 +1,196 @@
+// ----------
+// Navigation
+// ----------
+
+// Negative left margin for desktop
+.extendednavigation {
+    @media only screen and (min-width : 770px) {
+        margin-left: -12px;
+    }
+}
+
+.item-name--parent {
+    cursor: pointer;
+}
+
+// Parent nav items, adds arrow icon
+.item-name--parent:after {
+    display: inline-block;
+    vertical-align: middle;
+    content: "";
+    margin-left: 4px;
+    border: 5px solid transparent;
+    border-top-color: @color__navigation--text;
+}
+.item-name--parent:hover:after {
+    border-top-color: @color__navigation--text--hover;
+}
+
+// Selected nav item
+
+.navigation-item.selected > .item-name {
+    color: @color-swatch3;
+}
+
+
+// Hide toggle on desktop
+.navigation-toggle {
+    display: none;
+    @media @tablet {
+        display: inline-block;
+        position: absolute;
+        height: 44px;
+        width: 40px;
+        left: 0;
+        top: -46px;
+        text-indent: 1000px;
+        overflow: hidden;
+        line-height: 0;
+        background-color: transparent;
+        &:before {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 3px;
+            top: 0;
+            left: 0;
+            right: 0;
+            margin-top: 15px;
+            margin-left: -13px;
+            background: @color-swatch4;
+            box-shadow: 0 7px 0 @color-swatch4;
+            .transition( all, 0.5s, ease );
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 3px;
+            top: 14px;
+            left: 0;
+            right: 0;
+            margin-top: 15px;
+            margin-left: -13px;
+            background: @color-swatch4;
+            .transition( all, 0.5s, ease );
+        }
+    }
+    &:hover {
+        background-color: transparent;
+        &:before {
+            background: lighten(@color-swatch4, 40%);
+            box-shadow: 0 7px 0 lighten(@color-swatch4, 40%);
+        }
+        &:after {
+            background: lighten(@color-swatch4, 40%);
+        }
+    }
+}
+
+
+// Toggle Button Open State
+.open & {
+    &.navigation-toggle {
+        background-color: @color-swatch4;
+        &:before {
+            width: 26px;
+            margin-top: 21px;
+            margin-left: -4px;
+            background: @color-swatch1;
+            box-shadow: none;
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+            .transition( all, 0.5s, ease );
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            width: 26px;
+            height: 3px;
+            top: 0;
+            left: 50%;
+            right: 0;
+            margin-top: 21px;
+            margin-left: -4px;
+            background: @color-swatch1;
+            box-shadow: none;
+            -webkit-transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            -o-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+            .transition( all, 0.5s, ease );
+        }
+    }
+}
+
+// Clears margin on ul, hides navigatio on mobile (made visible in conjunction with navigation-toggle)
+.navigation-list {
+    margin: 0;
+    width: auto;
+    @media @tablet {
+        display: none;
+        width: 100%;
+        &.open {
+            display: block;
+        }
+    }
+}
+
+// Sets background colour to navigation and dropdowns
+.extendednavigation {
+    @media @tablet {
+        background-color: transparent;
+    }
+}
+.navigation-list--children {
+    min-width: 200px;
+    @media @tablet {
+        background-color: @color-swatch1;
+        min-width: 100%;
+    }
+}
+.navigation-list--children {
+    left: 12px;
+    right: 0;
+    white-space: normal;
+    border: 1px solid darken(@color-swatch1, 10%);
+    @media @tablet {
+        left: inherit;
+    }
+    .navigation-item--child {
+        @media only screen and (min-width:770px) {
+            border-bottom: 1px solid darken(@color-swatch1, 5%);
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+}
+
+// Sets nav items to full width on mobile and tablet
+.navigation-item {
+    @media @tablet {
+        display: block;
+    }
+}
+
+.navigation-item .item-name {
+    padding: 4px 12px;
+    @media @tablet {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.folder .navigation-item .item-name {
+    @media @tablet {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+}

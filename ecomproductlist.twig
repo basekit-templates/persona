@@ -1,0 +1,18 @@
+{% extends "layout.twig" %}
+{% block class %}bk-pt-store{% endblock %}
+{% block content %}
+
+    <div class="page-title">
+        {{widget('pagetitle', 'title', {})|raw}}
+    </div>
+
+    <!-- Page Content -->
+    <section class="zone-content">
+
+        <!-- Main Widget Zone -->
+        {{zone('main')|raw}}
+
+    </section>
+    <!-- End Page Content -->
+
+{% endblock %}
