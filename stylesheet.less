@@ -475,6 +475,9 @@ blockquote {
     }
     .content-inner-wrap {
         padding: 30px;
+        @media @mobile {
+            padding: 20px;
+        }
         background-color: @color-swatch7;
     }
     .headline {
@@ -503,7 +506,7 @@ blockquote {
     }
 }
 
-// Feature Image and Text Size on Tablet
+// Tablet
 @media @tablet {
     .feature {
         .background-image,
@@ -514,16 +517,13 @@ blockquote {
     }
 }
 
-// Feature Image and Text Size on Mobile
+// Mobile
 @media @mobile {
     .feature {
         .background-image,
         .content-wrap {
             min-height: 250px;
             height: 250px;
-        }
-        .content-wrap {
-            padding: 15px;
         }
     }
 }
