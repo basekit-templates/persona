@@ -103,9 +103,9 @@
         },
         "font8": {
             "font-family": "\"Karla\", Verdana, Geneva, sans-serif",
-            "font-size": "18px",
+            "font-size": "25px",
             "font-weight": "700",
-            "line-height": "28px",
+            "line-height": "32px",
             "color": "@color-swatch5",
             "letter-spacing": "inherit"
         },
@@ -210,11 +210,11 @@
             "color__feature-button--background": "@color__button--background",
             "color__feature-button--background--hover": "@color__button--background--hover",
 
-            "font__feature-headline--font-family" : "@font-swatch2-font-family",
-            "font__feature-headline--font-size" : "@font-swatch2-font-size",
-            "font__feature-headline--font-weight" : "@font-swatch2-font-weight",
-            "font__feature-headline--line-height" : "@font-swatch2-line-height",
-            "font__feature-headline--letter-spacing" : "@font-swatch2-letter-spacing",
+            "font__feature-headline--font-family" : "@font-swatch8-font-family",
+            "font__feature-headline--font-size" : "@font-swatch8-font-size",
+            "font__feature-headline--font-weight" : "@font-swatch8-font-weight",
+            "font__feature-headline--line-height" : "@font-swatch8-line-height",
+            "font__feature-headline--letter-spacing" : "@font-swatch8-letter-spacing",
 
             "font__feature-strapline--font-family" : "@font-swatch5-font-family",
             "font__feature-strapline--font-size" : "@font-swatch5-font-size",
