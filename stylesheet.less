@@ -457,8 +457,7 @@ blockquote {
     @media @tablet {
         margin-bottom: 2.5em;
     }
-    .background-image,
-    .content-wrap {
+    .background-image {
         min-height: 500px;
         height: 500px;
     }
@@ -468,12 +467,14 @@ blockquote {
         background-size: cover;
     }
     .content-wrap {
+        padding: 0;
         position: relative;
         width: 100%;
         vertical-align: bottom;
         display: table-cell;
-        text-align: left;
-        background-color: @color-swatch7;
+    }
+    .content-inner-wrap {
+        padding: 30px;
     }
     .headline {
         font-family: @font__h2--font-family;
@@ -505,14 +506,6 @@ blockquote {
             min-height: 350px;
             height: 350px;
         }
-        .headline {
-            font-size: bkscale(@font-swatch8-font-size, .8);
-            line-height: bkscale(@font-swatch8-line-height, .8);
-        }
-        .strapline {
-            font-size: bkscale(@font-swatch9-font-size, .9);
-            line-height: bkscale(@font-swatch9-line-height, .9);
-        }
     }
 }
 
@@ -526,14 +519,6 @@ blockquote {
         }
         .content-wrap {
             padding: 15px;
-        }
-        .headline {
-            font-size: bkscale(@font-swatch8-font-size, .6);
-            line-height: bkscale(@font-swatch8-line-height, .6);
-        }
-        .strapline {
-            font-size: bkscale(@font-swatch9-font-size, .8);
-            line-height: bkscale(@font-swatch9-line-height, .8);
         }
     }
 }
