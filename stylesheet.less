@@ -449,8 +449,97 @@ blockquote {
 
 
 // -----------------------------
-// Content Widget
+// Feature
 // -----------------------------
+
+.feature {
+    margin-bottom: 3em;
+    @media @tablet {
+        margin-bottom: 2.5em;
+    }
+    .background-image,
+    .content-wrap {
+        min-height: 500px;
+        height: 500px;
+    }
+    .background-image {
+        display: table;
+        width: 100%;
+        background-size: cover;
+    }
+    .content-wrap {
+        position: relative;
+        width: 100%;
+        vertical-align: bottom;
+        display: table-cell;
+        text-align: left;
+        background-color: @color-swatch7;
+    }
+    .headline {
+        font-family: @font__h2--font-family;
+        color: @color__h2--text;
+        font-size: @font__h2--font-size;
+        font-weight: @font__h2--font-weight;
+        line-height: @font__h2--line-height;
+    }
+    .strapline {
+        font-family: @font__p--font-family;
+        color: @color__p--text;
+        font-size: @font__p--font-size;
+        font-weight: @font__p--font-weight;
+        line-height: @font__p--line-height;
+    }
+    .button {
+        background-color: @color__feature-button--background;
+    }
+    .button:hover {
+        background-color: @color__feature-button--background--hover;
+    }
+}
+
+// Feature Image and Text Size on Tablet
+@media @tablet {
+    .feature {
+        .background-image,
+        .content-wrap {
+            min-height: 350px;
+            height: 350px;
+        }
+        .headline {
+            font-size: bkscale(@font-swatch8-font-size, .8);
+            line-height: bkscale(@font-swatch8-line-height, .8);
+        }
+        .strapline {
+            font-size: bkscale(@font-swatch9-font-size, .9);
+            line-height: bkscale(@font-swatch9-line-height, .9);
+        }
+    }
+}
+
+// Feature Image and Text Size on Mobile
+@media @mobile {
+    .feature {
+        .background-image,
+        .content-wrap {
+            min-height: 250px;
+            height: 250px;
+        }
+        .content-wrap {
+            padding: 15px;
+        }
+        .headline {
+            font-size: bkscale(@font-swatch8-font-size, .6);
+            line-height: bkscale(@font-swatch8-line-height, .6);
+        }
+        .strapline {
+            font-size: bkscale(@font-swatch9-font-size, .8);
+            line-height: bkscale(@font-swatch9-line-height, .8);
+        }
+    }
+}
+
+
+
 
 
 

@@ -2,10 +2,19 @@
 {% block class %}bk-pt-home{% endblock %}
 {% block content %}
 
-    <div class="home-bloglist">
-        <!-- Blog posts list Widget -->
-        {{widget('blogpostlist', 'allblogposts', {})|raw}}
+    <div class="home-feature">
+        <!-- Theme Feature Widget -->
+
+        {{widget('feature', 'featurehome', {
+            "header": "profile",
+            "defaultBgImg": asset('images/feature.jpg'),
+            'positionTopPercentage': '0',
+            'showBtn': false,
+            buttonText: "Lorem Ipsum"
+        })|raw}}
     </div>
+
+
 
 	<!-- Zone Content -->
 	<div class="zone-content">
