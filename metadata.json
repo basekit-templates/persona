@@ -204,7 +204,7 @@
             "font__navigation--letter-spacing" : "@font-swatch6-letter-spacing"
         },
         "feature": {
-            "color__feature-headline--text": "@font-swatch2-color",
+            "color__feature-headline--text": "@font-swatch4-color",
             "color__feature-strapline--text": "@font-swatch5-color",
             "color__feature-button--text": "@font-swatch7-color",
             "color__feature-button--background": "@color__button--background",
