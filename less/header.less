@@ -131,6 +131,9 @@ div#page-zones__template-widgets__extendednavigation-navigation .bk-overlay {
 // Navigation widget
 .template-navigation {
     @media @tablet {
+        -webkit-order: 1;
+        -ms-flex-order: 1;
+        order: 1;
         -webkit-flex: 1 1 auto;
         -ms-flex: 1 1 auto;
         flex: 1 1 auto;
@@ -138,6 +141,11 @@ div#page-zones__template-widgets__extendednavigation-navigation .bk-overlay {
         .navigation-toggle {
             height: 44px;
         }
+    }
+    @media @mobile {
+        -webkit-order: 0;
+        -ms-flex-order: 0;
+        order: 0;
     }
 }
 
