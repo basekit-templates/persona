@@ -113,9 +113,9 @@ div#page-zones__template-widgets__extendednavigation-navigation .bk-overlay {
 
 
 
-// --------------------------------------
-// Header First Row: Nav and Social Icons
-// --------------------------------------
+// ----------------------------------------------
+// Header First Row: Nav and Click to Call Widget
+// ----------------------------------------------
 
 .header-flex-container.template-header-rowone {
     -webkit-flex-direction: row-reverse;
@@ -166,6 +166,38 @@ div#page-zones__template-widgets__extendednavigation-navigation .bk-overlay {
     }
 }
 
+
+
+
+
+// ----------------------------------------------
+// Header First Row: Nav and Click to Call Widget
+// ----------------------------------------------
+
+.template-header .clicktocall .phone-number-link {
+    .label {
+        color: @color__navigation--text;
+        background-color: transparent;
+        @media screen and (max-width: 854px) {
+            color: @color__navigation--text;
+            background-color: transparent;
+        }
+    }
+    &:before {
+        color: color: @color__navigation--text;
+    }
+}
+
+.template-header .clicktocall {
+    @media @mobile {
+        .phone-number-link:before {
+            color: @color__navigation--text--selected;
+        }
+        .label {
+            display: none;
+        }
+    }
+}
 
 
 
