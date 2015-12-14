@@ -93,7 +93,6 @@ div#page-zones__template-widgets__extendednavigation-navigation .bk-overlay {
     @media @tablet {
         width: 50%;
         height: 44px;
-        top: -44px !important;
     }
     @media @mobile {
         width: 20%;
@@ -151,17 +150,19 @@ div#page-zones__template-widgets__extendednavigation-navigation .bk-overlay {
 
 .header-flex-item.header-clicktocall {
     min-height: 44px;
-    @media @mobile {
-        position: absolute;
-        right: 0;
-        width: 20%;
-        margin: 0 0 0 auto;
+    @media @tablet {
         .phone-number-link:hover {
             background-color: transparent;
             &:before {
                 color: @color__navigation--text--hover;
             }
         }
+    }
+    @media @mobile {
+        position: absolute;
+        right: 0;
+        width: 20%;
+        margin: 0 0 0 auto;
     }
 }
 
