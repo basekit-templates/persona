@@ -131,8 +131,6 @@ div#page-zones__template-widgets__extendednavigation-navigation .bk-overlay {
 // Navigation widget
 .template-navigation {
     @media @tablet {
-        -webkit-box-flex: 1;
-        -moz-box-flex: 1;
         -webkit-flex: 1 1 auto;
         -ms-flex: 1 1 auto;
         flex: 1 1 auto;
@@ -145,11 +143,17 @@ div#page-zones__template-widgets__extendednavigation-navigation .bk-overlay {
 
 .header-flex-item.header-clicktocall {
     min-height: 44px;
-    @media @tablet {
-        max-width: 80%;
-    }
     @media @mobile {
+        position: absolute;
+        right: 0;
+        width: 20%;
         margin: 0 0 0 auto;
+        .phone-number-link:hover {
+            background-color: transparent;
+            &:before {
+                color: @color__navigation--text--hover;
+            }
+        }
     }
 }
 
@@ -195,9 +199,6 @@ div#page-zones__template-widgets__extendednavigation-navigation .bk-overlay {
         &:before {
             color: @color__navigation--text;
             font-size: 20px;
-        }
-        &:hover:before {
-            color: @color__navigation--text--hover;
         }
     }
 }
