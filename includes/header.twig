@@ -4,16 +4,15 @@
 
 	<div class="template-header-rowone header-flex-container">
 
-        <div class="header-flex-item header-social">
-            {{widget('socialicons', 'socialnetworks', {
-            'googleplus': 'https://plus.google.com/101946323226233111530',
-            'linkedin':'http://www.linkedin.com/company/mycompanyname',
-            'facebook': 'https://www.facebook.com/mycompanyname',
-            'twitter': 'https://twitter.com/mycompanyname',
-            'youtube': 'https://www.youtube.com/user/mycompanyname',
-            'rss': 'http://news.bbc.co.uk/1/hi/help/rss/default.stm'
+        <div class="header-flex-item header-clicktocall">
+            {{widget('clicktocall', 'headerclicktocall', {
+            'phoneText': 'Call Now',
+            'italic': true,
+            'bold': true,
+            'fontSize': 18,
+            'align': 'widget-align-right'
             })|raw}}
-        </div><!-- End header-flex-item header-social -->
+        </div><!-- End header-flex-item header-clicktocall -->
 
         <div class="header-flex-item template-navigation">
             {{widget('extendednavigation', 'navigation', {"align":"left"})|raw}}
