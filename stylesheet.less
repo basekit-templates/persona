@@ -452,7 +452,7 @@ blockquote {
 // Feature
 // -----------------------------
 
-.feature {
+.home-feature .widget {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
@@ -471,11 +471,20 @@ blockquote {
     -webkit-align-items: stretch;
     -ms-flex-align: stretch;
     align-items: stretch;
+    img {
+        display: block !important;
+        -webkit-order: 0;
+        -ms-flex-order: 0;
+        order: 0;
+    }
+}
+
+.feature {
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
     .background-image {
         background-image: none !important;
-        -webkit-order: 1;
-        -ms-flex-order: 1;
-        order: 1;
     }
     .content-wrap {
         padding: 0;
@@ -512,38 +521,4 @@ blockquote {
         background-color: @color__feature-button--background--hover;
     }
 }
-
-.home-feature img {
-    display: block !important;
-    -webkit-order: 0;
-    -ms-flex-order: 0;
-    order: 0;
-}
-
-// Tablet
-@media @tablet {
-    .feature {
-        .background-image,
-        .content-wrap {
-            min-height: 350px;
-            height: 350px;
-        }
-    }
-}
-
-// Mobile
-@media @mobile {
-    .feature {
-        .background-image,
-        .content-wrap {
-            min-height: 250px;
-            height: 250px;
-        }
-    }
-}
-
-
-
-
-
 
