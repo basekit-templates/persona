@@ -180,11 +180,27 @@ div#page-zones__template-widgets__extendednavigation-navigation .bk-overlay {
         background-color: transparent;
         @media screen and (max-width: 854px) {
             color: @color__navigation--text;
-            background-color: transparent;
+        }
+        @media @mobile {
+            display: none;
         }
     }
     &:before {
         color: @color__navigation--text;
+    }
+    @media screen and (max-width: 854px) {
+        padding: 0;
+        line-height: 44px;
+        background-color: transparent;
+    }
+    @media @mobile {
+        text-align: right;
+        &:before {
+            color: @color__navigation--text;
+        }
+        &:hover:before {
+            color: @color__navigation--text--hover;
+        }
     }
 }
 
