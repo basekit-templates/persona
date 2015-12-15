@@ -1,12 +1,11 @@
 <!-- Header -->
 
-<div class="tablet-top-bar"></div>
-
 <header class="template-header container">
 
 	<div class="template-header-rowone header-flex-container">
 
         <div class="header-flex-item header-clicktocall">
+            <div class="tablet-top-bar"></div>
             {{widget('clicktocall', 'headerclicktocall', {
             'phoneText': '012 3456 789',
             'italic': false,
@@ -17,6 +16,7 @@
         </div><!-- End header-flex-item header-clicktocall -->
 
         <div class="header-flex-item template-navigation">
+            <div class="tablet-top-bar"></div>
             {{widget('extendednavigation', 'navigation', {"align":"left"})|raw}}
         </div>
 
