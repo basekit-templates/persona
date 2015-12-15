@@ -103,7 +103,9 @@ div#page-zones__template-widgets__extendednavigation-navigation {
 }
 
 .template-navigation .bk-tpl-hidden-mask:before {
-    width: 138px;
+    @media @tablet {
+        width: 138px;
+    }
 }
 
 
@@ -121,10 +123,12 @@ div#page-zones__template-widgets__extendednavigation-navigation {
     }
 }
 
-.template-navigation .bk-tpl-hidden-mask:before {
-    width: 138px;
-    right: 0;
-    left: inherit;
+.header-clicktocall .bk-tpl-hidden-mask:before {
+    @media @tablet {
+        width: 138px;
+        right: 0;
+        left: inherit;
+    }
 }
 
 
