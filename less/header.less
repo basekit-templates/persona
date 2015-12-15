@@ -99,14 +99,17 @@ div#page-zones__template-widgets__extendednavigation-navigation .bk-overlay {
     }
 }
 
-.header-flex-container div#page-zones__template-widgets__clicktocall-headerclicktocall .bk-overlay {
-    @media @tablet {
-        width: 130px;
-        height: 44px;
-        left: inherit !important;
-    }
-    @media @mobile {
-        width: 80%;
+.header-flex-container div#page-zones__template-widgets__clicktocall-headerclicktocall {
+    height: 44px;
+    .bk-overlay {
+        @media @tablet {
+            width: 130px;
+            height: 44px;
+            left: inherit !important;
+        }
+        @media @mobile {
+            width: 80%;
+        }
     }
 }
 
@@ -155,6 +158,10 @@ div#page-zones__template-widgets__extendednavigation-navigation .bk-overlay {
             }
         }
     }
+}
+
+.header-flex-item.header-clicktocall + .widget {
+    position: relative;
 }
 
 // Margins
