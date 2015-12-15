@@ -284,14 +284,6 @@ div#page-zones__template-widgets__extendednavigation-navigation .bk-overlay {
 // Tablet top Bar
 // -------------------
 
-
-.tablet-top-bar,
-.bk-tpl-hidden + .tablet-top-bar {
-    @media @tablet {
-        display: none;
-    }
-}
-
 .widget + .tablet-top-bar {
     @media @tablet {
         display: block;
@@ -304,5 +296,9 @@ div#page-zones__template-widgets__extendednavigation-navigation .bk-overlay {
     }
 }
 
-
-
+.tablet-top-bar,
+.bk-tpl-hidden + .tablet-top-bar {
+    @media @tablet {
+        display: none;
+    }
+}
