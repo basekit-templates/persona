@@ -89,15 +89,19 @@
 
 // Fix overlay in editor on tablet and mobile
 
-div#page-zones__template-widgets__extendednavigation-navigation .bk-overlay {
-    @media @tablet {
-        width: 20%;
-        height: 44px;
-    }
-    @media @mobile {
-        width: 20%;
+div#page-zones__template-widgets__extendednavigation-navigation {
+    height: 44px;
+    .bk-overlay {
+        @media @tablet {
+            width: 20%;
+            height: 44px;
+        }
+        @media @mobile {
+            width: 20%;
+        }
     }
 }
+
 
 .header-flex-container div#page-zones__template-widgets__clicktocall-headerclicktocall {
     height: 44px;
