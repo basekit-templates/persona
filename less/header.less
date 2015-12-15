@@ -287,7 +287,9 @@ div#page-zones__template-widgets__extendednavigation-navigation .bk-overlay {
 
 .tablet-top-bar,
 .bk-tpl-hidden + .tablet-top-bar {
-    display: none;
+    @media @tablet {
+        display: none;
+    }
 }
 
 .widget + .tablet-top-bar {
