@@ -284,9 +284,17 @@ div#page-zones__template-widgets__extendednavigation-navigation .bk-overlay {
 // Tablet top Bar
 // -------------------
 
+
+.tablet-top-bar,
+.bk-tpl-hidden + .tablet-top-bar {
+    display: none;
+}
+
 .widget + .tablet-top-bar {
     @media @tablet {
+        display: block;
         position: absolute;
+        top: 0;
         left: -5%;
         width: 110%;
         height: 44px;
