@@ -89,12 +89,10 @@
 
 // Fix overlay in editor on tablet and mobile
 
-div#page-zones__template-widgets__extendednavigation-navigation {
-    .bk-overlay {
-        @media @tablet {
-            width: 138px;
-            height: 44px;
-        }
+.extendednavigation + .widget-overlay {
+    @media @tablet {
+        width: 138px;
+        height: 44px;
     }
 }
 
@@ -105,9 +103,9 @@ div#page-zones__template-widgets__extendednavigation-navigation {
 }
 
 
-.header-flex-container div#page-zones__template-widgets__clicktocall-headerclicktocall {
+.header-clicktocall .widget {
     height: 44px;
-    .bk-overlay {
+    .widget-overlay {
         @media @tablet {
             width: 138px;
             height: 44px;
