@@ -196,6 +196,8 @@
             "color__navigation--text": "@color-swatch4",
             "color__navigation--text--hover": "@color__primary",
             "color__navigation--text--selected": "@color__primary",
+            "color__navigation--background": "lighten(@color-swatch1, 4%)",
+
 
             "font__navigation--font-family" : "@font-swatch6-font-family",
             "font__navigation--font-size" : "@font-swatch6-font-size",
