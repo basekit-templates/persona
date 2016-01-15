@@ -104,7 +104,7 @@
         "font8": {
             "font-family": "\"Karla\", Verdana, Geneva, sans-serif",
             "font-size": "25px",
-            "font-weight": "700",
+            "font-weight": "400",
             "line-height": "32px",
             "color": "@color-swatch5",
             "letter-spacing": "0px"
