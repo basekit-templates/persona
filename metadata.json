@@ -46,7 +46,7 @@
             "font-weight": "700",
             "line-height": "44px",
             "color": "@color-swatch4",
-            "letter-spacing": "inherit"
+            "letter-spacing": "0px"
         },
         "font2": {
             "font-family": "\"Karla\", Verdana, Geneva, sans-serif",
@@ -54,7 +54,7 @@
             "font-weight": "700",
             "line-height": "42px",
             "color": "@color-swatch2",
-            "letter-spacing": "inherit"
+            "letter-spacing": "0px"
         },
         "font3": {
             "font-family": "\"Karla\", Verdana, Geneva, sans-serif",
@@ -62,7 +62,7 @@
             "font-weight": "700",
             "line-height": "30px",
             "color": "@color-swatch4",
-            "letter-spacing": "inherit"
+            "letter-spacing": "0px"
         },
         "font4": {
             "font-family": "\"Karla\", Verdana, Geneva, sans-serif",
@@ -70,7 +70,7 @@
             "font-weight": "700",
             "line-height": "28px",
             "color": "@color-swatch4",
-            "letter-spacing": "inherit"
+            "letter-spacing": "0px"
         },
         "font5": {
             "font-family": "\"Merriweather\", Georgia, serif",
@@ -78,7 +78,7 @@
             "font-weight": "400",
             "line-height": "28px",
             "color": "@color-swatch5",
-            "letter-spacing": "inherit"
+            "letter-spacing": "0px"
         },
         "font6": {
             "font-family": "\"Karla\", Verdana, Geneva, sans-serif",
@@ -87,7 +87,7 @@
             "line-height": "26px",
             "color": "@color-swatch6",
             "color-hover": "@color-swatch3",
-            "letter-spacing": "inherit",
+            "letter-spacing": "0px",
             "background-color": "@color-swatch1",
             "background-color-hover": "@color-swatch1"
          },
@@ -97,7 +97,7 @@
             "font-weight": "700",
             "line-height": "26px",
             "color": "@color-swatch7",
-            "letter-spacing": "inherit",
+            "letter-spacing": "0px",
             "background-color": "@color-swatch3",
             "background-color-hover": "darken(@color-swatch3,10%)"
         },
@@ -107,7 +107,7 @@
             "font-weight": "700",
             "line-height": "32px",
             "color": "@color-swatch5",
-            "letter-spacing": "inherit"
+            "letter-spacing": "0px"
         },
         "font9": {
             "font-family": "\"Merriweather\", Georgia, serif",
@@ -115,7 +115,7 @@
             "font-weight": "400",
             "line-height": "24px",
             "color": "@color-swatch5",
-            "letter-spacing": "inherit"
+            "letter-spacing": "0px"
         },
         "font10": {
             "font-family": "\"Karla\", Verdana, Geneva, sans-serif",
@@ -123,7 +123,7 @@
             "font-weight": "700",
             "line-height": "46px",
             "color": "@color-swatch4",
-            "letter-spacing": "inherit"
+            "letter-spacing": "0px"
         }
     },
     "styles": {
@@ -218,11 +218,11 @@
             "font__feature-headline--line-height" : "@font-swatch8-line-height",
             "font__feature-headline--letter-spacing" : "@font-swatch8-letter-spacing",
 
-            "font__feature-strapline--font-family" : "@font-swatch5-font-family",
-            "font__feature-strapline--font-size" : "@font-swatch5-font-size",
-            "font__feature-strapline--font-weight" : "@font-swatch5-font-weight",
-            "font__feature-strapline--line-height" : "@font-swatch5-line-height",
-            "font__feature-strapline--letter-spacing" : "@font-swatch5-letter-spacing"
+            "font__feature-strapline--font-family" : "@font-swatch9-font-family",
+            "font__feature-strapline--font-size" : "@font__feature-strapline--font-size",
+            "font__feature-strapline--font-weight" : "@font__feature-strapline--font-weight",
+            "font__feature-strapline--line-height" : "@font-swatch9-line-height",
+            "font__feature-strapline--letter-spacing" : "@font-swatch9-letter-spacing"
         },
         "forms": {
             "color__form-legend--text": "@color__secondary",
