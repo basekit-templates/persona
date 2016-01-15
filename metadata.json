@@ -238,8 +238,10 @@
             "color__gallery-description--text": "@font-swatch9-color"
         },
         "slideshow": {
+            "color__slideshow--background": "transparent",
             "color__slideshow-title--text": "@font-swatch8-color",
             "color__slideshow-description--text": "@font-swatch9-color",
+            "color__slideshow-caption--background": "@color-swatch7",
             "color__slideshow-pagination-item--background": "hsla(hue(@color-swatch1), saturation(@color-swatch1), lightness(@color-swatch1), 0.5)",
             "color__slideshow-pagination-item--background--selected": "@color__secondary"
         },
