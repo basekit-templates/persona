@@ -84,24 +84,24 @@
     &:hover {
         background-color: transparent;
         &:before {
-            background: lighten(@color__navigation--text, 40%);
-            box-shadow: 0 7px 0 lighten(@color__navigation--text, 40%);
+            background: @color__navigation--text--hover;
+            box-shadow: 0 7px 0 @color__navigation--text--hover;
         }
         &:after {
-            background: lighten(@color__navigation--text, 40%);
+            background: @color__navigation--text--hover;
         }
     }
 }
 
 
 // Toggle Button Open State
-.open & {
+.open {
     &.navigation-toggle {
-        background-color: @color__navigation--text;
+        background-color: transparent;
         &:before {
             width: 26px;
             margin-top: 21px;
-            margin-left: -4px;
+            margin-left: 6px;
             background: @color-swatch1;
             box-shadow: none;
             -webkit-transform: rotate(45deg);
@@ -120,7 +120,7 @@
             left: 50%;
             right: 0;
             margin-top: 21px;
-            margin-left: -4px;
+            margin-left: -14px;
             background: @color-swatch1;
             box-shadow: none;
             -webkit-transform: rotate(-45deg);
