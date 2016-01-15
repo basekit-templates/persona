@@ -102,7 +102,7 @@
             width: 26px;
             margin-top: 21px;
             margin-left: 0;
-            background: @color-swatch1;
+            background: @color__navigation--text;
             box-shadow: none;
             -webkit-transform: rotate(45deg);
             -moz-transform: rotate(45deg);
@@ -121,7 +121,7 @@
             right: 0;
             margin-top: 21px;
             margin-left: -20px;
-            background: @color-swatch1;
+            background: @color__navigation--text;
             box-shadow: none;
             -webkit-transform: rotate(-45deg);
             -moz-transform: rotate(-45deg);
@@ -129,6 +129,14 @@
             -ms-transform: rotate(-45deg);
             transform: rotate(-45deg);
             .transition( all, 0.5s, ease );
+        }
+        &:hover {
+            &:before {
+                background: @color__navigation--text--hover;
+            }
+            &:after {
+                background: @color__navigation--text--hover;
+            }
         }
     }
 }
