@@ -76,7 +76,7 @@
 .bk-pt-store .page-title {
     margin-top: 40px;
     @media @tablet {
-        margin-top: 30px;
+        margin-top: 20px;
     }
 }
 
@@ -153,6 +153,17 @@
     }
 }
 
+// Margins
+
+@media only screen and (min-width: 770px) {
+    .extendednavigation,
+    .clicktocall {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+// Click to Call Widget
 .header-flex-item.header-clicktocall .clicktocall {
     min-height: 44px;
     @media @tablet {
@@ -168,29 +179,9 @@
         }
     }
 }
-
 .header-flex-item.header-clicktocall + .widget {
     position: relative;
 }
-
-// Margins
-
-@media only screen and (min-width: 770px) {
-    .extendednavigation,
-    .clicktocall {
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-}
-
-
-
-
-
-// ----------------------------------------------
-// Header First Row: Nav and Click to Call Widget
-// ----------------------------------------------
-
 .template-header .clicktocall .phone-number-link {
     white-space: nowrap;
     .label {
