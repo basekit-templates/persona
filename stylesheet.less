@@ -489,8 +489,13 @@ blockquote {
         display: table-cell;
     }
     .content-inner-wrap {
+        width: 90%;
+        margin: 0 auto;
         padding: 20px 30px;
         background-color: fade(@color-swatch7, 80%);
+        @media only screen and (max-width : 600px) {
+            width: 100%;
+        }
     }
     .headline {
         padding-bottom: 5px;
