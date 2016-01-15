@@ -111,9 +111,9 @@
         },
         "font9": {
             "font-family": "\"Merriweather\", Georgia, serif",
-            "font-size": "14px",
+            "font-size": "16px",
             "font-weight": "400",
-            "line-height": "24px",
+            "line-height": "26px",
             "color": "darken(@color-swatch5,3%)",
             "letter-spacing": "0px"
         },
