@@ -264,8 +264,10 @@ body {
     padding: 50px 0;
     background-color: lighten(@color-swatch1, 4%);
     @media screen and (max-width: 600px) {
-        text-align: center;
         background-color: @color-swatch1;
+    }
+    @media @mobile {
+        text-align: center;
     }
     p,
     a {
@@ -308,6 +310,9 @@ body {
 
 .template-footer__column2.col2 .tweet-item {
     text-align: left;
+    @media @mobile {
+        text-align: center;
+    }
 }
 
 
