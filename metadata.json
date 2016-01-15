@@ -219,8 +219,8 @@
             "font__feature-headline--letter-spacing" : "@font-swatch8-letter-spacing",
 
             "font__feature-strapline--font-family" : "@font-swatch9-font-family",
-            "font__feature-strapline--font-size" : "@font__feature-strapline--font-size",
-            "font__feature-strapline--font-weight" : "@font__feature-strapline--font-weight",
+            "font__feature-strapline--font-size" : "@font-swatch9-font-size",
+            "font__feature-strapline--font-weight" : "@font-swatch9-font-weight",
             "font__feature-strapline--line-height" : "@font-swatch9-line-height",
             "font__feature-strapline--letter-spacing" : "@font-swatch9-letter-spacing"
         },
