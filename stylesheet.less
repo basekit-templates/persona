@@ -8,7 +8,7 @@
 // Template Imports
 // ----------------
 @import "@{templateCommon}/bk-less-framework-v8.less"; // BaseKit LESS Framework
-// @import "@{templateLocal}/bk-v8-test.less";
+@import "@{templateLocal}/bk-v8-test.less";
 
 @import "@{templateLocal}/less/variables-mixins.less";         // Variables & Mixins
 
@@ -95,12 +95,12 @@ h1, h2, h3, h4, p {
 
 html body {
     background: @color__body--background;
-    background: -moz-linear-gradient(-45deg, @color__body--background 0%, @color__body--background 25%, @color__secondary 25%, @color__secondary 75%, @color__secondary 75%, @color__body--background 75%); 
-    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,@color__body--background), color-stop(25%,@color__body--background), color-stop(25%,@color__secondary), color-stop(75%,@color__secondary), color-stop(75%,@color__secondary), color-stop(75%,@color__body--background)); 
-    background: -webkit-linear-gradient(-45deg, @color__body--background 0%,@color__body--background 25%,@color__secondary 25%,@color__secondary 75%,@color__secondary 75%,@color__body--background 75%); 
-    background: -o-linear-gradient(-45deg, @color__body--background 0%,@color__body--background 25%,@color__secondary 25%,@color__secondary 75%,@color__secondary 75%,@color__body--background 75%); 
-    background: -ms-linear-gradient(-45deg, @color__body--background 0%,@color__body--background 25%,@color__secondary 25%,@color__secondary 75%,@color__secondary 75%,@color__body--background 75%); 
-    background: linear-gradient(135deg, @color__body--background 0%,@color__body--background 25%,@color__secondary 25%,@color__secondary 75%,@color__secondary 75%,@color__body--background 75%); 
+    background: -moz-linear-gradient(-45deg, @color__body--background 0%, @color__body--background 25%, @color__secondary 25%, @color__secondary 75%, @color__secondary 75%, @color__body--background 75%);
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,@color__body--background), color-stop(25%,@color__body--background), color-stop(25%,@color__secondary), color-stop(75%,@color__secondary), color-stop(75%,@color__secondary), color-stop(75%,@color__body--background));
+    background: -webkit-linear-gradient(-45deg, @color__body--background 0%,@color__body--background 25%,@color__secondary 25%,@color__secondary 75%,@color__secondary 75%,@color__body--background 75%);
+    background: -o-linear-gradient(-45deg, @color__body--background 0%,@color__body--background 25%,@color__secondary 25%,@color__secondary 75%,@color__secondary 75%,@color__body--background 75%);
+    background: -ms-linear-gradient(-45deg, @color__body--background 0%,@color__body--background 25%,@color__secondary 25%,@color__secondary 75%,@color__secondary 75%,@color__body--background 75%);
+    background: linear-gradient(135deg, @color__body--background 0%,@color__body--background 25%,@color__secondary 25%,@color__secondary 75%,@color__secondary 75%,@color__body--background 75%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@color__body--background', endColorstr='@color__body--background',GradientType=1 );
     @media only screen and (max-width : 600px) {
         background: @color__body--background;
