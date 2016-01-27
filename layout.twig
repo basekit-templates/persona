@@ -3,21 +3,26 @@
 <html class="no-js" lang="{{ page.seoLang }}">
 <!--<![endif]-->
 
-{% include "includes/head.twig" %}
+    {% include "includes/head.twig" %}
 
-<body class="{{ page.backgroundClass }} {% block class %}{% endblock %}">
+    <body class="{{ page.backgroundClass }} {% block class %}{% endblock %}">
 
-  {% include "includes/header.twig" %}
+    <div class="sticky-footer">
 
-        <div class="template-content">
+        {% include "includes/header.twig" %}
 
-            <div class="container">
-                {% block content %}
-                {% endblock %}
+            <div class="template-content">
+
+                <div class="container">
+                    {% block content %}
+                    {% endblock %}
+                </div>
+
             </div>
 
-        </div>
-    {% include "includes/footer.twig" %}
+        {% include "includes/footer.twig" %}
+
+    </div>
 
     {% include basekit.bodyScript %}
 
