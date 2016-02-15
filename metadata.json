@@ -190,7 +190,7 @@
             "font__button--letter-spacing" : "@font-swatch7-letter-spacing"
         },
         "footer": {
-            "color__footer--background": "@color-swatch7"
+            "color__footer--background": "lighten(@color__body--background, 4%)"
         },
         "navigation": {
             "color__navigation--text": "@color-swatch4",
