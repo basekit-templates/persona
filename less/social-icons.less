@@ -2,33 +2,30 @@
 // Social Icons
 // ------------
 
+.social-list {
+    @media @tablet {
+        line-height: 44px;
+    }
+}
+
 .socialicons .social-name {
     display: none;
 }
 
-// Social Icons in Header
-
-.header-flex-container {
-    .social-list {
-        @media @tablet {
-            line-height: 44px;
-        }
-    }
-    .socialicons {
-        text-align: right;
-    }
-    .social-item {
-        margin: 0;
-        padding: 0;
-    }
-    .social-link {
-        color: @color-swatch4;
-        padding: 5px;
-        &:hover {
-            color: @color-swatch3;
-            text-decoration: none;
-        }
-    }
-
+.social-item {
+    padding: 0;
 }
-
+.social-link {
+    color: @color__socialicons--icon;
+    padding: 5px;
+    &:hover {
+        color: @color__socialicons--icon--hover;
+        text-decoration: none;
+    }
+    &.icon:before {
+        color: @color__socialicons--icon;
+    }
+    &:hover:before {
+        color: @color__socialicons--icon--hover;
+    }
+}

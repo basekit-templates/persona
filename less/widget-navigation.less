@@ -14,6 +14,16 @@
     }
 }
 
+// Sets text colour
+.extendednavigation {
+    &__item-name.item-name {
+        color: @color__navigation--text;
+        &:hover {
+            color: @color__navigation--text--hover;
+        }
+    }
+}
+
 .item-name--parent {
     cursor: pointer;
 }
@@ -34,7 +44,7 @@
 // Selected nav item
 
 .navigation-item.selected > .item-name {
-    color: @color-swatch3;
+    color: @color__navigation--text--selected;
 }
 
 
@@ -163,7 +173,7 @@
 .navigation-list--children {
     min-width: 200px;
     @media @tablet {
-        background-color: @color-swatch1;
+        background-color: @color__body--background;
         min-width: 100%;
     }
 }
@@ -171,13 +181,13 @@
     left: 12px;
     right: 0;
     white-space: normal;
-    border: 1px solid darken(@color-swatch1, 10%);
+    border: 1px solid darken(@color__body--background, 10%);
     @media @tablet {
         left: inherit;
     }
     .navigation-item--child {
         @media only screen and (min-width:770px) {
-            border-bottom: 1px solid darken(@color-swatch1, 5%);
+            border-bottom: 1px solid darken(@color__body--background, 5%);
             &:last-child {
                 border-bottom: none;
             }

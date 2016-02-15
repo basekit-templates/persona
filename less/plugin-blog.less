@@ -88,6 +88,7 @@
     }
     .post-title {
         padding: 30px 0 20px;
+        color: @color__blogpost-title--text;
     }
     .post-title,
     .post-body {
@@ -173,6 +174,13 @@
 // --------------------------------
 
 
+// Hides blogpostlist widget in the zone
+.bk-pt-blogpostlist {
+    [data-name="blogpostlist"] {
+        display: none;
+    }
+}
+
 .blogpostlist {
     margin: 0 -20px 0 -10px;
     @media @tablet {
@@ -196,7 +204,7 @@
         margin: 0 10px 20px;
         position: relative;
         // Box Shadow
-        background-color: @color-swatch7;
+        background-color: @color__blogpostlist-article--background;
         -webkit-box-shadow: 6px 6px 6px -5px rgba(50, 50, 50, 0.15);
         -moz-box-shadow: 6px 6px 6px -5px rgba(50, 50, 50, 0.15);
         box-shadow: 6px 6px 6px -5px rgba(50, 50, 50, 0.15);
@@ -233,9 +241,9 @@
         }
     }
     .post-title .title-link {
-        color: @color-swatch4;
+        color: @color__blogpostlist-title--text;
         &:hover {
-            color: @color-swatch3;
+            color: @color__primary;
             text-decoration: none;
         }
     }
@@ -344,8 +352,7 @@
     }
 }
 
-// Blog List in Home Page and Blog Page
-.bk-pt-home,
+// Blog List in Blog Page
 .bk-pt-blogpostlist {
     .blogpostlist {
         .post-article {

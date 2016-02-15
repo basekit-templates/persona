@@ -117,7 +117,7 @@ textarea,
     font-size: @font__h2--font-size;
     line-height: @font__h2--line-height;
     font-weight: @font__h2--font-weight;
-    color: @color-swatch2;
+    color: @color__form-legend--text;
     margin-bottom: 10px;
 }
 
@@ -126,7 +126,7 @@ textarea,
     font-family: @font__p--font-family;
     font-size: bkscale(@font__p--font-size,0.9);
     line-height: bkscale(@font__p--line-height,0.9);
-    color: @font-swatch5-color;
+    color: @color__form-label--text;
 }
 
 .label {
@@ -147,7 +147,7 @@ textarea,
         font-size: @font__h2--font-size;
         line-height: @font__h2--line-height;
         font-weight: @font__h2--font-weight;
-        color: @color-swatch2;
+        color: @color__form-legend--text;
         margin-bottom: 10px;
     }
 }
@@ -156,6 +156,7 @@ textarea,
 .blogsearch {
     .legend {
         white-space: nowrap;
+        color: @color__blogsearch-legend--text;
     }
     .label {
         display: none;
@@ -477,10 +478,14 @@ textarea,
     }
 }
 
-
 // Hide Legend
 .ecomproductslist .legend {
     display: none;
+}
+
+// Label colour
+.ecomproductslist .label {
+    color: @color__ecomproductslist-label--text;
 }
 
 // Flexbox form on Desktop
