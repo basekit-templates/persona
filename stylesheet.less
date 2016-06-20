@@ -186,30 +186,32 @@ html body {
     @media only screen and (min-width : 770px) {
         position: relative;
         width: 100%;
-        [data-widget-type="pagetitle"] {
+        .page-title {
             position: absolute;
             top: 0;
             left: 0;
+            -webkit-transform-origin: 0% 0%;
+            -moz-transform-origin: 0% 0%;
+            -o-transform-origin: 0% 0%;
+            -ms-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+            -webkit-transform: rotate(-90deg) translate(-100%, 0px);
+            -moz-transform: rotate(-90deg) translate(-100%, 0px);
+            -o-transform: rotate(-90deg) translate(-100%, 0px);
+            -ms-transform: rotate(-90deg) translate(-100%, 0px);
+            transform: rotate(-90deg) translate(-100%, 0px);
+            overflow: hidden;
             h1 {
                 padding: 0;
                 line-height: 1.2;
                 text-align: right;
                 white-space: nowrap;
-                overflow: hidden;
                 text-overflow: ellipsis;
                 font-size: @font__h1--font-size;
                 max-width: 70vh;
-                
-                -webkit-transform-origin: 0% 0%;
-                -moz-transform-origin: 0% 0%;
-                -o-transform-origin: 0% 0%;
-                -ms-transform-origin: 0% 0%;
-                transform-origin: 0% 0%;
-                -webkit-transform: rotate(-90deg) translate(-100%, 0px);
-                -moz-transform: rotate(-90deg) translate(-100%, 0px);
-                -o-transform: rotate(-90deg) translate(-100%, 0px);
-                -ms-transform: rotate(-90deg) translate(-100%, 0px);
-                transform: rotate(-90deg) translate(-100%, 0px);
+            }
+            .widget__list {
+                top: -40px!important;
             }
         }
         .zone-content {
