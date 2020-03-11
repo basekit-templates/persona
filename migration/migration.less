@@ -1,0 +1,72 @@
+// -----------------------------
+// Migration Styles
+// -----------------------------
+
+
+#migrated-site {
+
+
+
+
+    // Stylesheet overrides
+    // -----------------------------
+
+
+    .site-container {
+        width: 100%;
+    }
+    
+    
+    &.template-default .template-header {
+        margin-bottom: 0;
+    }
+    
+
+    .template-footer {
+        margin-top: 0;
+    }
+
+
+
+
+    // Migration styles
+    // -----------------------------
+    
+    
+    // Applies spacing to widgets to mimic container width
+    [data-widget-type="extendednavigation"],
+    [data-widget-type="feature"],
+    .template-header,
+    .template-footer,
+    .empty-zone,
+    #page-zones__main:empty,
+    #page-zones__main > .widget:not([data-name="row"]),
+    .row:not(.row--width-no-padding) .row__container {
+
+        @media only screen and (min-width: 1140px) {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 960px;
+            width: 90%;
+        }
+    }
+    
+    
+    // Adds spacing to a section when a widget follows it
+    #page-zones__main > [data-name="row"] + .widget:not([data-name="row"]),
+    #page-zones__main > .widget:not([data-name="row"]) + [data-name="row"]:not(:last-child),
+    &.edit #page-zones__main-overlay + .widget:not([data-name="row"]),
+    #page-zones__main > .widget:not([data-name="row"]):first-child {
+        margin-top: 2.5em;
+    }
+
+    
+    // Move spacing to last widget in the main zone (not sections)
+    #page-zones__main > .widget:not([data-name="row"]):last-child {
+        margin-bottom: 2em;
+
+        @media @tablet {
+            margin-bottom: 1em;
+        }
+    }
+}
