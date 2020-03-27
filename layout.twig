@@ -4,7 +4,7 @@
 
     {% include "includes/head.twig" %}
 
-    <body class="{{ page.backgroundClass }} {% block class %}{% endblock %}">
+    <body {{ isV10sSite ? 'id="migrated-site"' : '' }} class="{{ page.backgroundClass }} {% block class %}{% endblock %}">
 
     <div class="sticky-footer">
 
